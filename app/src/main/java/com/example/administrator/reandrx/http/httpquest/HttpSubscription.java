@@ -1,7 +1,5 @@
 package com.example.administrator.reandrx.http.httpquest;
 
-import android.app.Activity;
-
 import com.example.administrator.reandrx.http.GsonHelper;
 import com.example.administrator.reandrx.model.HttpCode;
 import com.example.administrator.reandrx.model.httpresponse.BaseHttpResponse;
@@ -78,15 +76,15 @@ public class HttpSubscription<T> extends Subscriber<ResponseBody> {
                             if (((BaseHttpResponse) res).getStatusCodeMsg().equals(HttpCode.FAIL_C.getValuse())) {
                                 userData.setLogin(false);
                                 userData.save(userData);
-                                //跳转到登录页
-                                if (callBack.baseActivity != null) {
+//                                //跳转到登录页
+//                                if (callBack.baseActivity != null) {
 //                                    LoginActivity.startUI(callBack.baseActivity);
-                                    ToastUtils.getToastLong("提示:请重新登录--->跳转到登录界面--->callBack.baseActivity != null");
-                                }
-                                if (callBack.basePresenter != null && callBack.basePresenter.mvpView instanceof Activity) {
+//                                }
+//                                if (callBack.basePresenter != null && callBack.basePresenter.mvpView instanceof Activity) {
 //                                    LoginActivity.startUI((Activity) callBack.basePresenter.mvpView, true);
-                                    ToastUtils.getToastLong("提示:请重新登录--->跳转到登录界面--->callBack.basePresenter != null && callBack.basePresenter.mvpView instanceof Activity");
-                                }
+//                                }
+
+                                ToastUtils.getToastLong("请重新登录");
                             }
                         }
                         callBack.onSuccess(res);

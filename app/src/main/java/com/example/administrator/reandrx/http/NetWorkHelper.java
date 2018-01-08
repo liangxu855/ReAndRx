@@ -15,7 +15,7 @@ public class NetWorkHelper {
     public static Uri uri = Uri.parse("content://telephony/carriers");
 
     /**
-     * 判断是否有网络连�?
+     * 判断是否有网络连
      */
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager connectivity = (ConnectivityManager) context

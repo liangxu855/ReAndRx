@@ -3,30 +3,27 @@ package com.example.administrator.reandrx.http.base.iview;
 
 import com.example.administrator.reandrx.http.listener.empty_layout.LoadingAndRetryManager;
 
-import rx.Subscription;
-import rx.subscriptions.CompositeSubscription;
-
 /**
  * Created by Administrator on 2016/8/8.
  */
 
 public interface BaseView {
-    boolean isLogin(boolean isToLogin);
+//    boolean isLogin(boolean isToLogin);
 
     /**
      * 显示对话框，用于网络请求
      */
     void showDialog(String msg, boolean isCancelable);
 
-    /**
-     * 显示对话框
-     */
-    void showDialog(String msg);
-
-    /**
-     * 显示对话框
-     */
-    void showDialog();
+//    /**
+//     * 显示对话框
+//     */
+//    void showDialog(String msg);
+//
+//    /**
+//     * 显示对话框
+//     */
+//    void showDialog();
 
     /**
      * 关闭加载中对话框
@@ -45,21 +42,21 @@ public interface BaseView {
 
     LoadingAndRetryManager getLoadingAndRetryManager();
 
-    /**
-     * 网络回调保存进集合，尽量在P里面调用
-     *
-     * @param s
-     */
-    public void addSubscription(Subscription s);
-
-    public CompositeSubscription getCompositeSubscription();
+//    /**
+//     * 网络回调保存进集合，尽量在P里面调用
+//     *
+//     * @param s
+//     */
+//    public void addSubscription(Subscription s);
+//
+//    public CompositeSubscription getCompositeSubscription();
 
     /**
      * 显示错误信息
      */
     void showErrorSnackbar(String result);
 
-    void showErrorSnackbar(String result, boolean isFinish);
+//    void showErrorSnackbar(String result, boolean isFinish);
 
     /**
      * 显示警告信息

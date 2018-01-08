@@ -157,7 +157,8 @@ public abstract class HttpCallBack<ResultType> {
             errString = "未知的错误";
             errCode = -200;
         }
-        LogUtils.e("onError->error, "+errString);
+        LogUtils.e("onError->error, "+errString+"   "+ error.toString());
+
         data.setTitle(errString);
         data.setErrCode(errCode);
         if (basePresenter != null && basePresenter.mvpView != null) {
